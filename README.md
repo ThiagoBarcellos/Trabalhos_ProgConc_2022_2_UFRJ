@@ -2,79 +2,86 @@
 
 ## 500
 
-    tempo da preparação: 0.000099
-    tempo da multiplicacao: 0.000001
-    tempo da escrita: 0.000582
-
-    tempo da preparação: 0.000099
-    tempo da multiplicacao: 0.000001
-    tempo da escrita: 0.000428
-
-    tempo da preparação: 0.000107
-    tempo da multiplicacao: 0.000001
-    tempo da escrita: 0.000508
-
-### tempo médio: 
-
-    tempo da preparação: 0.0000101
-    tempo da multiplicacao: 0.000001
-    tempo da escrita: 0.000506
-
-### Ganho de desempenho: 
-    tempo sequencial: 0.000608
-    tempo concorrente: 0.0006075
-    ganho estimado: 1.00082
+|    |  Sequencial  |  Tempo médio |
+|:-- | :---: | :---: | 
+|Tempo de preparação| 0.000099 / 0.000099 / 0.0000101| 0.0000101 |
+|Tempo da multiplicação| 0.000001 / 0.000001 / 0.000001 | 0.000001 |
+|Tempo da escrita| 0.000582 / 0.000428 / 0.000508 | 0.000506 |
+ 
+ ### Ganho de desempenho: 
+    Tempo sequencial: 0.000608
+    Tempo concorrente: 0.0006075
+    Ganho estimado: 1.00082
 
 ---
 
 ## 1000
 
-    tempo da preparação: 0.002532
-    tempo da multiplicacao: 0.468794
-    tempo da escrita: 0.287775
-
-    tempo da preparação: 0.001074
-    tempo da multiplicacao: 0.468197
-    tempo da escrita: 0.291728
-
-    tempo da preparação: 0.000689
-    tempo da multiplicacao: 0.466667
-    tempo da escrita: 0.287840
-
-### tempo médio: 
-
-    tempo da preparação: 0.001431
-    tempo da multiplicacao: 0.467886
-    tempo da escrita: 0.289114
+|    |  Sequencial  |  Tempo médio |
+|:-- | :---: | :---: | 
+|Tempo de preparação| 0.002532 / 0.001074 / 0.000689| 0.001431 |
+|Tempo da multiplicação| 0.468794 / 0.468197 / 0.466667 | 0.467886 |
+|Tempo da escrita| 0.287775 / 0.291728 / 0.287840 | 0.289114 |
 
 ### Ganho de desempenho: 
-    tempo sequencial: 0.758431
-    tempo concorrente: 0.524488
-    ganho estimado: 1.4460
+    Tempo sequencial: 0.758431
+    Tempo concorrente: 0.524488
+    Ganho estimado: 1.4460
 
 ---
 
 ## 2000
 
-    tempo da preparação: 0.008452
-    tempo da multiplicacao: 28.754991
-    tempo da escrita: 0.011687
-
-    tempo da preparação: 0.010006
-    tempo da multiplicacao: 28.659498
-    tempo da escrita: 0.010567
-
-    tempo da preparação: 0.009592
-    tempo da multiplicacao: 28.685989
-    tempo da escrita: 0.010072
-
-### tempo médio: 
-
-    tempo da preparação: 0.009350
-    tempo da multiplicacao: 28.723160
-    tempo da escrita: 0.010775
+|    |  Sequencial  |  Tempo médio |
+|:-- | :---: | :---: | 
+|Tempo de preparação| 0.008452 / 0.010006 / 0.009592| 0.009350 |
+|Tempo da multiplicação| 28.754991 / 28.659498 / 28.685989 | 28.723160 |
+|Tempo da escrita| 0.011687 / 0.010567 / 0.010072 | 0.010775 |
 
 ### Ganho de desempenho: 
-    tempo sequencial: 28.743285
-    tempo concorrente: 14.381755
-    ganho estimado: 1.9985
+    Tempo sequencial: 28.743285
+    Tempo concorrente: 14.381755
+    Ganho estimado: 1.9985
+
+
+# Lab 03
+
+## 500
+
+|    |  2 Threads  |  3 Threads | 4 Threads | Tempo médio ( 2 / 3 / 4 threads) |
+|:-- | :---: | :---: | :---: | :---: |
+|Tempo de preparação| 0.000095 / 0.000073 / 0.000144| 0.000138 / 0.000063 / 0.000072 | 0.000134 / 0.000074 / 0.000079 | 0.000104 / 0.000091 / 0.000095 |
+|Tempo da multiplicação| 0.000179 / 0.000134 / 0.000174 | 0.000205 / 0.000171 / 0.000139 | 0.000146 / 0.000110 / 0.000151 | 0.00162 / 0.000171 / 0.000135 |
+|Tempo da escrita| 0.000474 / 0.000362 / 0.000505 | 0.000442 / 0.000279 / 0.000366 | 0.000465 / 0.000345 / 0.000392 | 0.000447 / 0.000362 / 0.000400 |
+
+---
+
+## 1000
+
+|    |  2 Threads  |  3 Threads | 4 Threads | Tempo médio ( 2 / 3 / 4 threads) |
+|:-- | :---: | :---: | :---: | :---: |
+|Tempo de preparação| 0.004867 / 0.001983 / 0.001672 | 0.001908 / 0.003136 / 0.001770 | 0.003106 / 0.001819 / 0.002562 | 0.002840 / 0.002271 / 0.002495 |
+|Tempo da multiplicação| 0.944049 / 0.929796 / 0.931171 | 0.935314 / 0.955586 / 0.931860 | 0.960021 / 0.929027 / 0.957338 | 0.935005 / 0.940920 / 0.948795 |
+|Tempo da escrita| 0.003040 / 0.003330 / 0.002981 | 0.003120 / 0.003034 / 0.003439 | 0.002977 / 0.003344 / 0.003146 | 0.003117 / 0.003197 / 0.003155 |
+
+---
+
+## 2000
+
+|    |  2 Threads  |  3 Threads | 4 Threads | Tempo médio ( 2 / 3 / 4 threads) |
+|:-- | :---: | :---: | :---: | :---: |
+|Tempo de preparação| 0.009520 / 0.008728 / 0.009877 | 0.007102 / 0.005888 / 0.007124 | 0.009162 / 0.009376 / 0.006653 | 0.008397 / 0.006704 / 0.008397 |
+|Tempo da multiplicação| 7.757618 / 7.739436 / 7.748498 | 7.675893 / 7.691744 / 7.653187 | 7.728321 / 7.706894 / 7.796326 | 7.748517 / 7.673608 / 7.743847 |
+|Tempo da escrita| 0.010909 / 0.010291 / 0.010225 | 0.009941 / 0.010244 / 0.010279 | 0.010582 / 0.011248 / 0.010355 | 0.010485 / 0.010154 / 0.010728 |
+
+---
+
+### Ganho de desempenho: 
+
+| | Tempo sequencial | Tempo concorrente (2 Threads) | Tempo concorrente (3 Threads) | Tempo concorrente (3 Threads) | Ganho estimado (2) | Ganho real (2 / 3 / 4) |
+| :-- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 500 | 0.000608 | 0.000713 | 0.000624 | 0.000630 | 1.00082 | 0.8527 / 0.9743 / 0.9571 |
+| 1000 | 0.758431 | 0.940962 | 0.946388 | 0.954445 | 1.4460 | 0.8060 / 0.8013 / 0.7946 | 
+| 2000 | 28.743285 | 7.767399 | 7.690466 | 7.762972 | 1.9985 | 3.7005 / 3.7375 / 3.7026 |
+
+O computador em questão tem 4 processadores.

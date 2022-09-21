@@ -15,28 +15,20 @@ int nThreads;
 void * tarefa (void * arg){
     int ident = * (int *) arg;
     int start = (linhas/nThreads) * (ident-1);
-    int end = (linhas/nThreads) * ident;
-    
-    // int aux =0;
-
-    // for(int i=args->id; i<args->dim; i+=nthreads){
-    //   for(int j=0; j<args->dim; j++){ 
-    //      Matriz_saida_Concorrente[i*args->dim +j]=0;
-	// 	for(int k=0; k<args->dim; k++){
-	// 	    aux+=mat1[i*args->dim +k]*mat2[k*args->dim+j];				
-	// 	}
-	// 	Matriz_saida_Concorrente[i*args->dim+j]=aux;
-	// 	aux=0;
-	// }
-	// }
+    int end = 0;
+    if(nThreads == ident){
+        end = linhas;
+    }
+    else{
+        end = (linhas/nThreads) * ident;
+    }
 
     for(int i = start; i < end; i++){
         for(int j = 0; j < colunas2; j++){
+            saida[i*colunas+j] = 0;
             for(int k = 0; k < colunas; k++){
                 saida[i*colunas2+j]+=mat[i*colunas +k]*mat2[k*colunas2+j];
-                // saida[(i*colunas2)+j] += mat[(i*colunas)+k] * mat2[(k*colunas2)+j];
             }
-            // saida[i*colunas2+j] = aux;
         }
     }
 
@@ -143,14 +135,6 @@ int main (int argc, char* argv[]){
             exit(-1);
         }
     }
-
-    // for(int i = 0; i < linhas; i++){
-    //     for(int j = 0; j < colunas2; j++){
-    //         for(int k = 0; k < colunas; k++){
-    //             saida[(i*colunas2)+j] += mat[(i*colunas)+k] * mat2[(k*colunas2)+j];
-    //         }
-    //     }
-    // }
 
     GET_TIME(finish);
     elapsed = finish - start;

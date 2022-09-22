@@ -47,8 +47,7 @@ int main (int argc, char* argv[]){
 
     GET_TIME(start);
 
-    // nThreads = (int)argv[4];
-    nThreads = 4;
+    nThreads = atoi(argv[4]);
 
     //abre o arquivo para leitura binaria
     Arquivo = fopen(argv[1], "rb");
